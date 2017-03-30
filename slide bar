@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+ body{
+	 width:960px;
+	 margin:15px auto;
+	 font-family:Arial,"MS Trebuchet", sans-serif;
+	 background-color:#FFC}
+ p{margin:0 0 20px 0;}
+ p,li{line-height:20px;}
+ header#page_header{width:100% ;}
+
+ #page_header nav ul,#page_footer nav ul{
+	 list-style:none;
+	 margin:0;
+	 padding:0;}
+ #page_header nav ul{
+	 
+	 width:400px;
+	 background-color:white;
+	 padding:0 20px;
+	 }
+ #page_header a{
+	 color:black;
+	 text-decoration:none;
+ }
+ #page_header nav ul li,#page_footer nav ul li{
+	 padding 0; margin:0 20px 0 0;
+	 display:inline;}
+ #posts{
+	 float:left;
+	 width:74%;}
+ #posts aside{float:right;
+           width:35%;
+		   margin-left:5%;
+		   font-size:20px;
+		   line-size:40px;}
+ #sidebar{position:absolute;
+          top:-264px;
+		  right:30px;
+		  }
+ #sidebar li{
+	  list-style:none;}
+          
+ #page_footer{
+	 clear:both;
+	 width:100%;
+	 display:block;
+	 text-align:center;}
+
+ 
+</style>
+</head>
+
+<body>
+
+<script>
+ window.onload=function(){
+	 var ul1=document.getElementById("ul1");
+	 var Li1=ul1.getElementsByTagName("a");
+	 for(var i=0;i<Li1.length;i++){
+		 Li1[i].onmouseover=function(){
+		 this.style.color="grey";}
+ }
+     for(var i=0;i<Li1.length;i++){
+		 Li1[i].onmouseout=function(){
+		 this.style.color="black";}
+ }
+ 
+    var sidebar=document.getElementById("sidebar");
+	sidebar.onmouseover=function(){
+		startMove(0);}
+	sidebar.onmouseout=function(){
+		startMove(-264);}
+		var timer=null;
+		function startMove(target){
+	 clearInterval(timer);
+	 var oDiv=document.getElementById('sidebar');
+	 /*if (target>oDiv.offsetLeft){
+		 speed=10;}else{speed=-10;}
+		 */
+	timer=setInterval(function(){
+	 var speed=(target-oDiv.offsetTop)/10;
+	 speed=speed>0?Math.ceil(speed):Math.floor(speed);
+	
+	 if(oDiv.offsetTop==target){
+	 clearInterval(timer);
+	 }else{
+	 oDiv.style.top=oDiv.offsetTop+speed+'px';
+	 }
+	 },30);
+ }
+		
+ }
+ 
+ 
+</script>
+
+
+
+<header id="page_header">
+ <h1>AwesomeCo Blog!</h1>
+ <nav>
+   <ul id="ul1">
+     <li><a href="/">Lastest Posts</a></li>
+     <li><a href="archives">Archives</a></li>
+     <li><a href="contributors">Contributors</a></li>
+     <li><a href="contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<section id="posts">
+<article class="posts">
+ <header>
+  <h2>How Many Should We Put Down For?</h2>
+  <p>Posted by Britain on<time datetime="2010-10-01T14:39">October 1st,2010 at 2:39PM</time>
+  </p>
+ </header>
+  <aside>
+  <p>&quot;Never give someone a chance to say no when selling your products.&quot;</p>
+ </aside>
+ <p>The first big rule in sales is that if the person left empty-handed,they're likely not going to come back.That's why you have to be somewhat aggressive when you're working with a customer,but you have to make sure you don't overdo it and scare them away.</p>
+ <p>One way you can keep a conversation going is to avoid asking questions that have yes or no answers.For example,you're selling a sevice plan,don't ask &quot;Are you interested in the 3 year service plan or the 5year plan .which is a better value?&quot;At first glance,they appear to ask the same thing 
+ </p>
+<footer>
+  <p><a href="comments"><i>25 Comments</i></a>...</p>
+ </footer>
+ </article>
+</section>
+
+<section id="sidebar">
+ <nav>
+  <h3>Achives</h3>
+  <ul>
+   <li><a href="2010/10">October 2010</a></li>
+   <li><a href="2010/9">September 2010</a></li>
+   <li><a href="2010/8">August 2010</a></li>
+   <li><a href="2010/7">July 2010</a></li>
+   <li><a href="2010/6">June 2010</a></li>
+   <li><a href="2010/5">May 2010</a></li>
+   <li><a href="2010/4">April 2010</a></li>
+   <li><a href="2010/3">March 2010</a></li>
+   <li><a href="2010/2">February 2010</a></li>
+   <li><a href="2010/1">January 2010</a></li>
+   
+  </ul>
+  <h3>More</h3>
+ </nav>
+</section>
+   
+   
+<footer id="page_footer">
+ <p>&copy; 2010AwesomeCo.</p>
+ <nav>
+  <ul>
+   <li><a href="http://awesome.com/">Home</a></li>
+   <li><a href="about">About</a></li>
+   <li><a href="terms">Terms of survice</a></li>
+   <li><a href="privacy">Privacy</a></li>
+  </ul>
+ </nav>
+</footer>
+
+
+<script type="text/javascript">
+ 
+</script>
+</body>
+</html>
+
