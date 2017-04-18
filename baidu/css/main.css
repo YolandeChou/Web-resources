@@ -1,0 +1,183 @@
+@charset "utf-8";
+/* CSS Document */
+body,form{
+position:relative;
+}
+*{
+	padding:0;
+	margin:0;
+}
+a{
+	color:#000;
+}
+.upper{
+	width:100%;
+	min-width:1000px;
+	position:relative;
+}
+.top{
+	height:30px;
+	border-bottom:1px solid #CCC;
+	font-size:13px;
+}
+.top_left{
+	float:left;
+	height:20px;
+}
+.top_left li{
+	list-style:none;
+	float:left;
+	margin:6px;
+	text-align:center;
+}
+.top_right li ul{
+	position:absolute;
+	margin-left:-20px;
+	border:solid #CCC 1px;
+	visibility:hidden;
+	
+}
+.top_right li li{
+	clear:both;
+	width:80px;
+	text-align:center;
+}
+.top_right li li a{
+	text-decoration:none;
+    
+}
+#person{
+	padding:0 20px;
+}
+#setting{
+	margin:0 20px;
+}
+#weather{
+	border-right:1px solid #000;
+	padding:0 5px;
+}
+#weather a{
+	text-decoration:none;
+}
+.top_right{
+	float:right;
+	line-height:30px;
+	width:450px;
+}
+.top_right li{
+	float:left;
+	padding:0 6px;
+	list-style:none;
+}
+#product{
+	background-color:#09F;
+}
+#product a{
+	color:#FFF;
+	text-decoration:none;
+}
+.top a{
+	color:#000;
+}
+.logo img{
+	width:270px;
+	height:129px;
+}
+.logo,.search{
+	position:absolute;
+	left:50%;
+	margin-left:-147px;
+}
+form{
+	display:block;
+}
+.middle{
+	margin-top:150px;
+	height:55px;
+	padding:10px 0;
+}
+.search{
+	margin-left:-390px;
+}
+#submit{
+	background-color:#09C;
+	height:45px;
+	width:100px;
+	color:#FFF;
+	text-align:center;
+	line-height:40px;
+	font-size:16px;
+	margin-left:15px;
+	font-weight:bold;
+	border:none;
+}
+
+.search img{
+	display:inline-block;
+	margin-right:20px;
+	margin-top:10px;
+	visibility:hidden;
+}
+#text{
+	font-size:18px;
+	line-height:35px;
+	height:35px;
+	width:400px;
+	border:none;
+}
+.search form{
+	border:solid 1px #09C;
+	display:inline-block;
+}
+.search span:hover{
+	cursor:pointer;
+}
+.main{
+	width:800px;
+	margin:0 auto;
+	min-height:600px;
+	border:1px solid #CCC;
+	margin-top:100px;
+}
+.main_top{
+	border-bottom:solid 1px #CCC;
+	height:40px;
+}
+.main_top li{
+	list-style:none;
+	float:left;
+}
+.main_top li a{
+	line-height:40px;
+	padding:5px 20px;
+	text-decoration:none;
+}
+#top_back{
+	height:80px;
+	width:100%;
+	border:solid 1px #999;
+	display:inline-block;
+	position:fixed;
+	visibility:hidden;
+	background-color:#FFF;
+	opacity:0.75;
+}
+
+
+/*特效*/
+.clicked_li{
+	background-color:#666;
+}
+.clicked_a{
+	color:#FFF;
+	font-weight:bold;
+}
+.hover_li{
+	background-color:#999;
+}
+.hover_a{
+	color:#FFF;
+}
+
+
+
