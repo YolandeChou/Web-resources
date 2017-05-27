@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/main.css" type="text/css" rel="stylesheet" />
+<script src="jquery-3.1.1.min.js"></script>
+<script src="js/main.js" type="text/javascript"></script>
+<script src="js/Untitled-1.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div class="topper">
+    <div class="topper_box center">
+      <div class="topperLef floLef">
+        <img src="image/psd21230_03.jpg" />
+      </div>
+      <div class="topperRig floRig">
+         <div class="topperRig_t">
+           <ul>
+             <li id="firPage"><a href="#" alt="设置主页" >设置主页</a></li>
+             <li id="colPage"><a href="#" alt="收藏本站" >收藏本站</a></li>
+             <li>联系电话：<span>0592-XXXXXXX</span></li>
+           </ul>
+         </div>
+         <div class="topperRig_b">
+            <ul>
+               <li><a href="#">网页首页</a></li>
+               <li><a href="#">关于员源</a></li>
+               <li><a href="#">人才通道</a></li>
+               <li><a href="#">技能培训</a></li>
+               <li><a href="#">劳务派遣</a></li>
+               <li><a href="#">企业服务</a></li>
+               <li><a href="#">成功案例</a></li>
+               <li><a href="#">新闻资讯</a></li>
+               <li><a href="#">联系我们</a></li>
+            </ul>
+         </div>
+      </div>
+    </div>
+</div><!--topper结束-->
+<div class="box">
+   <div class="main" id="template_main">
+      <div class="main-i" id="main_{{index}}">
+         <div class="caption">
+          <h2>{{h2}}</h2>
+          <h3>{{h3}}</h3>
+         </div>
+          <img id="main-{{index}}" src="image/{{index}}.jpg" />
+      </div>
+   </div>
+   <div class="ctrl" id="template_ctrl">
+      <a href="javascript:switchSlider({{index}})" id="ctrl_{{index}}" class="ctrl-i">
+          <img src="image/{{index}}.jpg" />
+      </a>
+   </div>
+</div><!--box结束-->
+<div class="service center"> 
+   <h2>员源企业服务</h2>
+   <h3>Enterprise service</h2>
+   <div class="floLef" id="serBox1">
+      <h3>企业培训</h3>
+      <span>
+        <img src="image/psd21230_17.jpg" />
+      </span>
+      <p>为企业经营诊断整合、体系建立、流程梳理、各种类型的员工培训、代理企业新技术项目、 ...</p>
+   </div><!--serBox1结束-->
+   <div class="floLef" id="serBox2">
+      <h3>劳务派遣</h3>
+      <span>
+        <img src="image/psd21230_14.jpg" />
+      </span>
+      <p>为企业提供劳务用工派遣（临时工、小时工、普工、固定工、承包生产线、短期项目承包、 ...</p>
+   </div><!--serBox2结束-->
+   <div class="floLef" id="serBox3">
+      <h3>企业服务</h3>
+      <span>
+        <img src="image/psd21230_20.jpg" />
+      </span>
+      <p>为企业提供基、中、高端技工，基、中、高端管理人才和人才测评...</p>
+   </div><!--serBox3结束-->
+</div><!--service结束-->
+<div class="case center"> 
+   <h2>用户案例</h2>
+   <h3>Classic Case</h2>
+   <div class="floLef" id="casBox1">
+      <h3>案例名称：新员工培训</h3>
+      <span>
+        <img src="image/psd21230_26.jpg" />
+      </span>
+      <p>《劳动合同法》明确了劳务派遣的用工形式，是把双刃剑，一方面它的执行提高了劳动者的维权意识，一方面也规范了企业的用工...</p>
+      <div id="more"><a href="#">了解详情</a></div>
+   </div><!--casBox1结束-->
+   <div class="floLef" id="casBox2">
+      <h3>案例名称：新员工培训</h3>
+      <span>
+        <img src="image/psd21230_26.jpg" />
+      </span>
+      <p>《劳动合同法》明确了劳务派遣的用工形式，是把双刃剑，一方面它的执行提高了劳动者的维权意识，一方面也规范了企业的用工...</p>
+      <div id="more"><a href="#">了解详情</a></div>
+   </div><!--casBox1结束-->
+   <div class="floLef" id="casBox3">
+      <h3>案例名称：新员工培训</h3>
+      <span>
+        <img src="image/psd21230_26.jpg" />
+      </span>
+      <p>《劳动合同法》明确了劳务派遣的用工形式，是把双刃剑，一方面它的执行提高了劳动者的维权意识，一方面也规范了企业的用工...</p>
+      <div id="more"><a href="#">了解详情</a></div>
+   </div><!--casBox1结束-->
+</div><!--case结束-->
+
+<div class="news">
+  <div class="newsBox center">
+      <div class="newsLeft floLef">
+         <div class="newsTit">
+           <h3>员源新闻</h3><span class="hot">Hot News</span><span class="more"><a href="#">更多</a></span>
+         </div>
+         <div class="newsMain">
+           <img src="image/psd21230_34.jpg" />
+           <span>
+               <h5>如今慢慢趋于转向“劳务外包”</h5>
+               <p>“目前这几年下来暂不招工人，许多都在天然减员，能省下公司一笔成本，下一步还将经过扩展外包的方法进一步削减出产一线的
+        用工”，马良广接受采访...</p>
+           </span>
+         </div>
+         <div class="newsList">
+            <ul>
+              <li><a href="#">如今慢慢趋于转向“劳务外包”</a></li>
+              <li><a href="#">劳务派遣行业门槛将提高</a></li>
+              <li><a href="#">农民工司令张全收：珠三角已不是人力大本营</a></li>
+              <li><a href="#">2012新法下劳务派遣形式分析与派遣员工管理高级研讨会</a></li>
+              <li><a href="#">掘金中国制造：工段外包的秘密</a></li>
+              <li><a href="#">全国工会组织劳务派遣工入会工作现场经验交流会议在沈阳召开</a></li>
+            </ul>
+         </div>
+      </div>
+      <div class="newsRig floRig">
+        <div class="newsTit">
+           <h3>员源最新招聘</h3><span class="hot">New Job</span><span class="more"><a href="#">更多</a></span>
+        </div>
+           <table>
+             <tr><td>职位名称</td><td>工作地点招</td><td>聘数量</td><td>薪资</td><td>结束时间</td></tr>
+             <tr><td>营销总监</td><td>福州</td><td>1</td><td>面议</td><td>2014-06-30</td></tr>
+             <tr><td>金融副总经理</td><td>晋江</td><td>1</td><td>面议</td><td>2014-06-30</td></tr>
+             <tr><td>市场经</td><td>成都</td><td>1</td><td>面议</td><td>2014-06-30</td></tr>
+             <tr><td>营销总监</td><td>福州</td><td>1</td><td>面议</td><td>2014-06-30</td></tr>
+             <tr><td>金融副总经理</td><td>晋江</td><td>1</td><td>面议</td><td>2014-06-30</td></tr>
+             <tr><td>营销总监</td><td>福州</td><td>1</td><td>面议</td><td>2014-06-30</td></tr>
+             <tr><td>金融副总经理</td><td>晋江</td><td>1</td><td>面议</td><td>2014-06-30</td></tr>
+             <tr><td>市场经</td><td>成都</td><td>1</td><td>面议</td><td>2014-06-30</td></tr>
+             <tr><td>营销总监</td><td>福州</td><td>1</td><td>面议</td><td>2014-06-30</td></tr>
+           </table>
+      </div>
+   </div>
+</div><!--news结束-->
+
+<div class="cooperation center">
+  <div class="newsTit">
+     <h3>员源合作企业</h3><span class="hot">Customer testimonials</span>
+  </div>
+  <div class="ad">
+    <a href="#"><img src="image/psd21230_37.jpg" /></a>
+    <p>厦门太古可口可乐饮料有限公司</p>    
+  </div>
+  <div class="ad">
+     <a href="#"><img src="image/psd21230_40.jpg" /></a>
+     <p>厦门美时美克空气净化有限公司</p>
+  </div>
+  <div class="ad">
+    <a href="#"><img src="image/psd21230_42.jpg" /></a>
+    <p>雀巢(中国)有限公司厦门分公司</p>
+  </div>
+  <div class="ad">
+    <a href="#"><img src="image/psd21230_37.jpg" /></a>
+    <p>厦门太古可口可乐饮料有限公司</p>    
+  </div>
+  <div class="ad">
+     <a href="#"><img src="image/psd21230_40.jpg" /></a>
+     <p>厦门美时美克空气净化有限公司</p>
+  </div>
+  <div class="ad">
+    <a href="#"><img src="image/psd21230_42.jpg" /></a>
+    <p>雀巢(中国)有限公司厦门分公司</p>
+  </div>
+  <div class="ad">
+    <a href="#"><img src="image/psd21230_37.jpg" /></a>
+    <p>厦门太古可口可乐饮料有限公司</p>    
+  </div>
+  <div class="ad">
+     <a href="#"><img src="image/psd21230_40.jpg" /></a>
+     <p>厦门美时美克空气净化有限公司</p>
+  </div>
+  <div class="ad">
+    <a href="#"><img src="image/psd21230_42.jpg" /></a>
+    <p>雀巢(中国)有限公司厦门分公司</p>
+  </div>
+  <div class="ad">
+    <a href="#"><img src="image/psd21230_37.jpg" /></a>
+    <p>厦门太古可口可乐饮料有限公司</p>    
+  </div>
+  <span id="more2"><a href="#">更多</a></span>
+  <div class="link">
+     <span class="linkTit floLef">友情链接</span>
+     <ul class="floLef">
+       <li><a href="#">21世纪人才网</a></li>
+       <li><a href="#">厦门总工会</a></li>
+       <li><a href="#">厦门人力资源和社会保障局</a></li>
+       <li><a href="#">中国人力资源网</a></li>
+     </ul>
+  </div>
+</div><!--cooperation结束-->
+
+<div class="footer">
+   <div class="footerTop">
+     <div class="footerTop_box center">
+       <ul>
+         <li><a href="#">网页首页</a></li>
+         <li><a href="#">关于员源</a></li>
+         <li><a href="#">人才通道</a></li>
+         <li><a href="#">技能培训</a></li>
+         <li><a href="#">劳务派遣</a></li>
+         <li><a href="#">企业服务</a></li>
+         <li><a href="#">成功案例</a></li>
+         <li><a href="#">新闻资讯</a></li>
+         <li><a href="#">联系我们</a></li>
+       </ul>
+     </div>
+   </div>
+   <div class="footerBot">
+     <div class="center">
+     </div>
+   </div>
+</div><!--footer结束-->
+</body>
+</html>
