@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 tansitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-auiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Yoo</title>
+<link href="css/style.css" type="text/css" rel="stylesheet" />
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/vue.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<style>
+			/* 
+			 * 由于IE不支持<template>标签，所以template标签中的内容在IE下会直接显示出来。
+			 * 将模板设为隐藏即可解决这个问题，template标签各浏览器支持请参考：http://caniuse.com/#feat=template
+			 */
+			#grid-template{
+				display: none;
+			}
+</style>
+</head>
+
+<body>
+<div id="app">
+   <div class="container">
+      <div class="form-group">
+         <label>Search</label>
+         <input type="text" class="search-input" v-model='searchQuery' />
+      </div>
+   </div>
+   <div class="container">
+      <simple-grid :data-list='people' :columns='columns' :search-key='searchQuery'></simple-grid>
+   </div>
+</div>
+
+<template id="simple-grid">
+   <table>
+     <thead>
+       <tr>
+          <th v-for='col in columns'>{{col.name|capitalize}}</th>
+          <th>Delete</th>
+       </tr>
+     </thead>
+     <tbody>
+        <tr v-for="(index,entry) in dataList | filterBy searchKey">
+           <td v-for="col in columns">
+             <span v-if="col.isKey"><a href="javascript:void(0)" @click="openEditItemDialog(entry[col.name])">{{entry[col.name]}}</a></span>
+           	 <span v-else>{{ entry[col.name] }}</span>
+           </td>
+           <td class="text-center">
+              <button class="btn-danger" @click='deleteItem(entry)'>delete</button>
+           </td>
+        </tr>
+      </tbody>
+   </table>
+   <div class="container">
+	 <button @click="openNewItemDialog('Create New Item')">Create</button>
+   </div>
+
+	<model-dialog :mode="mode" :title="title" :fields="columns" :item="item" v-on:create-item="createItem">
+	</model-dialog>
+</template>
+
+<template id="dialog-template">
+   <div class="dialogs">
+      <div class="dialog" v-bind:class="{'dialog-active':show}">
+         <div class="dialog-content">
+            <header class="dialog-header">
+               <h2 class="dialog-title">{{ title }}</h2>
+            </header>
+            <div v-for="field in fields" class="form-group">
+				<label>{{ field.name }}</label>
+				<select v-if="field.dataSource" v-model="item[field.name]" :disabled="mode===2&&field.isKey">
+					<option v-for="opt in field.dataSource" :value="opt">{{ opt }}</option>
+				</select>
+				<input v-else type="text" v-model="item[field.name]" :disabled="mode===2&&field.isKey">
+			</div>
+            <footer class="dialog-footer">
+               <div class="form-group">
+                  <label></label>
+                  <button v-on:click="save">Save</button>
+                  <button v-on:click="close">Close</button>
+               </div>
+            </footer>
+         </div>
+      </div>
+      <div class="dialog-overlay"></div>
+   </div>
+</template>
+</body>
+</html>
